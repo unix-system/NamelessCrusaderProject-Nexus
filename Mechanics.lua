@@ -23,24 +23,6 @@ ________________________________________________________________________________
 
 																																																	--]]																																														--]]
 
-						do
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						end
-
 
 
 
@@ -65,7 +47,7 @@ do -- LOAD PLAYER
 
 
 	-- CONFIG LOADING
-      config = player:FindFirstChild("Config")
+config = player:FindFirstChild("Config")
 local tries = 0
 repeat
 	config = player:FindFirstChild("Config")
@@ -77,7 +59,7 @@ if config then
 	if tries > 2 then
 	print("Located Config after "..tries.." retries")
 	else
-	print("Failed to locate Config after 1 retry")
+	print("Located Config after 1 retry")
 	end
 else
 	print("Failed to locate Config after 10 retries")
