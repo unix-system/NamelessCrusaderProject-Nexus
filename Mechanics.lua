@@ -10,40 +10,40 @@ ________________________________________________________________________________
 
 							PROJECT INFORMATION
 __________________________________________________________________________________________________________________________________________________________________
- 				
-						
-																																																	                                                                                     																												
-       PROJECT STARTED 	( 12 / 10 / 15  ) : ( 19:11 )	
-	   PROJECT FINISHED	( 0 / 0 / 0     ) : ( 00:00 )	
-	   
+
+
+
+       PROJECT STARTED 	( 12 / 10 / 15  ) : ( 19:11 )
+	   PROJECT FINISHED	( 0 / 0 / 0     ) : ( 00:00 )
+	   PROJECT OWNERS: SCRIPTERMAX & NOCOLLIDER
 __________________________________________________________________________________________________________________________________________________________________
 
 							CODE CANYON STARTS BELOW
 __________________________________________________________________________________________________________________________________________________________________
-																																														
-																																																	--]]																																														--]]	
-																																																	
+
+																																																	--]]																																														--]]
+
 						do
-							
-							
-							
-							
-							
-							
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						end																																											
-																																																	
-																																																	
-																																															
-																																														
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						end
+
+
+
+
 
 
 local player = game.Players.LocalPlayer
@@ -62,12 +62,12 @@ f_dump = {} -- FUNCTION DUMP
 
 
 do -- LOAD PLAYER
-	
-	
+
+
 	-- CONFIG LOADING
       config = player:FindFirstChild("Config")
 local tries = 0
-repeat 
+repeat
 	config = player:FindFirstChild("Config")
 	if config then break end
 	tries = tries +1
@@ -84,10 +84,10 @@ else
 end
 
 	-- STATUS LOADING
-	
+
 	   status = player:FindFirstChild("Stats")
 local tries = 0
-repeat 
+repeat
 	config = player:FindFirstChild("Stats")
 	if config then break end
 	tries = tries +1
@@ -106,54 +106,53 @@ end
 
 do -- PICKUP SYSTEM
 	local m = mouse
-	
-	
+
+
 	ITEM_SUBCLASSES={
 	["WEAPON"]="0X3#XX";
 	["HEADGEAR"]="1&0EDD";
 	["CHESTRIG"]="2&0EDD";
-	["3&0EDD"]="LEGGINGS";	
+	["3&0EDD"]="LEGGINGS";
 	["1X5#XX"]="FOOD";
-	["001DDE"]="ITEM";	
+	["001DDE"]="ITEM";
 	}
 
-	
-	
-	
+
+
+
 m.KeyDown:connect(function(key)
 	key = key:lower()
 	if key == config:WaitForChild("Key_Input")["PICK_UP_KEY"].Value then
-		
 
-	
+
+
 	local item = f_dump.SCAN_ITEM(m.Target,true)
 			if item then
-				
-				
-				
-				
+
+
+
+
 			end
-			
-		
+
+
 	end
 end)
 end
 
 -- FUNCTION DUMP
 do
-	
+
 f_dump.SCAN_ITEM=function(spore,pr)
-	
+
 	if spore.Parent:FindFirstChild("IT_TOKEN") then
-		
+
 		local tok = spore["Parent"]["IT_TOKEN"]
-		
+
 		if tok.Value == ITEM_SUBCLASSES
-		
-	end	
-	
-end	
-	
-	
+
+	end
+
 end
 
+
+end
